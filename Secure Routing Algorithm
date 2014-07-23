@@ -1,0 +1,54 @@
+Secure Routing () 
+// Algorithm for achieving full network level privacy
+// Input:  node count per cell (n), source node, destination node
+// output: The shortest path, distance, hops and time from source to destination with               authentication at each private node.
+                                 
+Transmissionrange=50;
+For each cell in network do
+  Place n nodes randomly within the boundaries of each cell
+  Calculate centroid ();
+End for
+
+For each node in cell
+ Calculate Euclidian distance between node (i) and centroid
+ Private_node->node with smallest distance from centroid
+ Gateway_node->node with largest distance from centroid
+End for
+
+while (destination not reached)
+ current_node->c
+ neighbour[]->null
+ neighbourcount->0
+ Fill routing table by calculating distance from the current node to every node in the network  
+ for nodes in table with (distance<transmissionrange)
+     add to neighbour[]
+     neighbourcount++
+   end for
+
+Sort(neighbour based on distance from destination)
+  For each node in neighbour
+         i->0;
+         send neighbour(i) for authentication()
+         if(!Nack)
+             hop to that neighbour(i)
+             break
+         else
+            continue
+            end for
+end while
+
+5.2.1 Algorithm for Authentication
+
+authentication()
+//Algorithm for authentication at private nodes
+//Input: node k
+//Output: send nack if node already in path array else add it to path
+
+if(k==source)
+    path[]->null;
+   decrypt path[]
+if(k in path[])
+  return(Nack)
+else
+  encrypt(k)
+  add to path[]
