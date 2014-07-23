@@ -1,0 +1,10 @@
+The various modules identified in this protocol are: -
+•	Secure Routing: Implements IRL-1 and IRL-2 privacy algorithms on top of   our Link State Routing Protocol.
+•	Basic Routing: Implements Link State Routing Protocol to send data from source to destination.
+•	Private Node: Node closest to the centroid in each cell and the only node in a cell to access the path array
+•	Gateway Node: Node farthest to the centroid
+•	Centroid Calculation: Module to calculate the centroid of each cell
+•	Sender: J2ME emulation of a sending device
+•	Receiver: J2ME emulator of a receiving device
+•	Client: Nodes which connect to form the topology in the Initial simulation. Each client has its own socket to connect to other clients
+•	Network Manager: Runs a server Socket, deploys the Applet and provides a command line interface to the user
