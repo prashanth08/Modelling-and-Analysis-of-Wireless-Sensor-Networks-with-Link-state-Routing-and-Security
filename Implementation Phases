@@ -1,0 +1,18 @@
+Phase 1
+Implementation is the stage of the project when the theoretical design is turned out into a working system. Thus it can be considered to be the most critical stage in achieving a successful new system and in giving the user, confidence that the new system will work and be effective.
+The implementation stage involves careful planning, investigation of the existing system and it’s constraints on implementation, designing of methods to achieve changeover and evaluation of changeover methods.
+In phase 1, we implement our network model. A network manager is created which provides the user interface for alternate path routing. It runs a server socket and listens to any client trying to connect to the network. This is done by clicking the listen button. The shortest path from source to destination is taken for routing. If a node, currently in the shortest path fails, an alternate path is calculated. Each node forwards the data to its nearest node and each node maintains its own routing table.
+We use J2ME Wireless toolkit to emulate the sender and receiver mobile nodes. A user interface is provided to initiate both nodes and type the message to be sent. After the user clicks sent, the message is routed using the shortest path available. This message is also encrypted using Quasigroup Encryption Algorithm.
+The entire simulation is carried out using JAVA. The GUI is created using swings and we create batch files for one click applet launching. The topology is created using socket programming, where we create client and server sockets on each node. The intermediate nodes can be taken down or reinstated by typing a simple in/out string on the command line interpreter.
+The topology consists of only five nodes initially in order to simulate and demonstrate link state routing and data encryption.
+
+6.2 Phase 2
+6.2.1 Identity, Route, and Location Privacy (IRL)
+
+In the second phase, we simulate our link state routing protocol, with IRL security using JAVA Swings to create the GUI.  A network topology is constructed, which is divided into hexagonal cells (clusters). Each cell can have a maximum of six nodes and a minimum of two nodes. We provide two input dialogs to select the number of nodes and the encryption algorithm for IRL.
+
+After the cell and node placement, the user is prompted to initialize the nodes by clicking the “Initialize Nodes” button. As an action, the centroid for each cell is created and the private and gateway nodes are determined. The node which is closest to the centroid becomes the private node and the one farthest becomes the gateway node. 
+
+The user then needs to select the source and destination nodes by clicking on them. If the user selects basic routing, then the data is routed without any security implementation. A routing table is created with the distance of each node from every other node in the network. The source node selects only those nodes which are at a distance of 50 or less from it (Transmission range). It forwards the packet to the neighbor which is closest to the destination and adds it to the path array. The same process is repeated for the next node till the destination is reached.
+
+In secure routing, the path array can only be accessed by the private nodes and its contents are encrypted. When a node is to be added to the path array, the current node has to go to the private node access the path array come back and then decide the next hop. Hence the identity of the source, route taken and the location of the current node are private. The user can compare the path, no of hops taken and the time taken for both the routing protocols.
