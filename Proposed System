@@ -1,0 +1,5 @@
+•	A new Identity, Route and Location (IRL) privacy algorithm is proposed that ensures the anonymity of source node’s identity and location.
+•	It also assures that the packets will reach their destination by passing through only trusted intermediate nodes.
+•	.The anonymity of the current intermediate node is maintained.
+•	The intermediate nodes are oblivious to the previous path taken
+•	A new data privacy mechanism is proposed, which provides payload encryption and decryption
